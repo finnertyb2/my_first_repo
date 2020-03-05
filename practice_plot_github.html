@@ -374,7 +374,8 @@ summary {
 <pre class="r"><code>iris %&gt;%
   ggplot(aes(x=Sepal.Length, y=Petal.Length, fill=Species))+
   geom_bar(stat=&quot;identity&quot;, position = &quot;dodge2&quot;) +
-  facet_wrap(~Species) -&gt; practice_plot
+  facet_wrap(~Species)+
+  labs(title=&quot;First Bar Plot&quot;)-&gt; practice_plot
 
   
 ggsave(&quot;practice_plot_github.png&quot;, practice_plot)</code></pre>

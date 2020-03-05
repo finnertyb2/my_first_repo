@@ -18,7 +18,8 @@ library(tidyverse)
 iris %>%
   ggplot(aes(x=Sepal.Length, y=Petal.Length, fill=Species))+
   geom_bar(stat="identity", position = "dodge2") +
-  facet_wrap(~Species) -> practice_plot
+  facet_wrap(~Species)+
+  labs(title="First Bar Plot")-> practice_plot
 
   
 ggsave("practice_plot_github.png", practice_plot)
