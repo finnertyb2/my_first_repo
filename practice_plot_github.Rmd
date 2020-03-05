@@ -1,0 +1,27 @@
+---
+title: "practice plotting in github"
+author: "Brooke Finnerty"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## R Markdown
+
+
+
+```{r}
+iris %>%
+  ggplot(aes(x=Sepal.Length, y=Petal.Length, fill=Species))+
+  geom_bar(stat="identity", position = "dodge2") +
+  facet_wrap(~Species) -> practice_plot
+
+  
+ggsave("practice_plot_github.png", practice_plot)
+
+```
+
